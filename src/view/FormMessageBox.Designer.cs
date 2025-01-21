@@ -36,9 +36,11 @@
             // buttonOk
             // 
             buttonOk.BackgroundImageLayout = ImageLayout.Center;
-            buttonOk.Location = new Point(314, 104);
+            buttonOk.ForeColor = Color.FromArgb(123, 131, 138);
+            buttonOk.Location = new Point(366, 104);
+            buttonOk.Margin = new Padding(4, 3, 4, 3);
             buttonOk.Name = "buttonOk";
-            buttonOk.Size = new Size(61, 29);
+            buttonOk.Size = new Size(71, 29);
             buttonOk.TabIndex = 0;
             buttonOk.Text = "Ok";
             buttonOk.UseVisualStyleBackColor = true;
@@ -47,23 +49,27 @@
             // MessageLabel
             // 
             MessageLabel.Font = new Font("Corbel", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            MessageLabel.Location = new Point(13, 16);
+            MessageLabel.ForeColor = Color.FromArgb(163, 189, 255);
+            MessageLabel.Location = new Point(15, 16);
+            MessageLabel.Margin = new Padding(4, 0, 4, 0);
             MessageLabel.Name = "MessageLabel";
-            MessageLabel.Size = new Size(362, 85);
+            MessageLabel.Size = new Size(422, 85);
             MessageLabel.TabIndex = 1;
             MessageLabel.Text = "label1";
             // 
             // FormMessageBox
             // 
-            AutoScaleDimensions = new SizeF(6F, 14F);
+            AutoScaleDimensions = new SizeF(7F, 14F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(123, 131, 138);
-            ClientSize = new Size(387, 145);
+            BackColor = Color.FromArgb(51, 51, 51);
+            ClientSize = new Size(451, 145);
             Controls.Add(MessageLabel);
             Controls.Add(buttonOk);
-            Font = new Font("Corbel", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            Font = new Font("Corbel", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            ForeColor = Color.FromArgb(163, 189, 255);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(4, 3, 4, 3);
             Name = "FormMessageBox";
             Text = "FormMessageBox";
             ResumeLayout(false);

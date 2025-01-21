@@ -53,7 +53,7 @@ namespace LyricsFinder.src.view
             // 
             // songLabel
             // 
-            songLabel.BackColor = Color.FromArgb(193, 89, 59);
+            songLabel.BackColor = Color.FromArgb(163, 189, 255);
             songLabel.BorderStyle = BorderStyle.FixedSingle;
             songLabel.Font = new Font("Corbel", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             songLabel.ForeColor = Color.Black;

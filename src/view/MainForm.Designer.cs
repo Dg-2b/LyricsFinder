@@ -45,14 +45,14 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.DarkSlateGray;
+            BackColor = Color.FromArgb(51, 51, 51);
             ClientSize = new Size(800, 450);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximumSize = new Size(816, 489);
             Name = "MainForm";
-            Text = "Lyrics finder";
+            Text = "Lyrics Finder";
             Load += MainForm_Load;
             ResumeLayout(false);
         }

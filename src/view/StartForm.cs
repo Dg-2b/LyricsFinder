@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -51,9 +52,34 @@ namespace LyricsFinder.src.view
             searchButton.BackColor = Color.Transparent;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void gitHubLabel_Click(object sender, EventArgs e)
         {
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo { FileName = "https://github.com/Dg-2b/LyricsFinder", UseShellExecute = true });
+        }
 
+        private void apiLabel_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo { FileName = "https://lyricsovh.docs.apiary.io/#", UseShellExecute = true });
+        }
+
+        private void apiLabel_MouseEnter(object sender, EventArgs e)
+        {
+            apiLabel.ForeColor = Color.FromArgb(123, 131, 138);
+        }
+
+        private void apiLabel_MouseLeave(object sender, EventArgs e)
+        {
+            apiLabel.ForeColor = Color.FromArgb(163, 189, 255);
+        }
+
+        private void gitHubLabel_MouseEnter(object sender, EventArgs e)
+        {
+            gitHubLabel.ForeColor = Color.FromArgb(123, 131, 138);
+        }
+
+        private void gitHubLabel_MouseLeave(object sender, EventArgs e)
+        {
+            gitHubLabel.ForeColor = Color.FromArgb(163, 189, 255);
         }
     }
 }

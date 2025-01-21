@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(StartForm));
-            backgroundPicture1 = new PictureBox();
             artistLabel = new Label();
             songLabel = new Label();
             artistTextBox = new TextBox();
@@ -38,18 +37,9 @@
             searchButton = new Button();
             gitHubLabel = new Label();
             apiLabel = new Label();
-            ((System.ComponentModel.ISupportInitialize)backgroundPicture1).BeginInit();
+            reiDancingpictureBox = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)reiDancingpictureBox).BeginInit();
             SuspendLayout();
-            // 
-            // backgroundPicture1
-            // 
-            backgroundPicture1.Image = (Image)resources.GetObject("backgroundPicture1.Image");
-            backgroundPicture1.Location = new Point(-45, 62);
-            backgroundPicture1.Name = "backgroundPicture1";
-            backgroundPicture1.Size = new Size(870, 334);
-            backgroundPicture1.SizeMode = PictureBoxSizeMode.CenterImage;
-            backgroundPicture1.TabIndex = 0;
-            backgroundPicture1.TabStop = false;
             // 
             // artistLabel
             // 
@@ -57,7 +47,7 @@
             artistLabel.BackColor = Color.Transparent;
             artistLabel.Font = new Font("Corbel", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             artistLabel.ForeColor = Color.Black;
-            artistLabel.Location = new Point(208, 62);
+            artistLabel.Location = new Point(188, 23);
             artistLabel.Name = "artistLabel";
             artistLabel.Size = new Size(78, 29);
             artistLabel.TabIndex = 0;
@@ -70,7 +60,7 @@
             songLabel.BackColor = Color.Transparent;
             songLabel.Font = new Font("Corbel", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             songLabel.ForeColor = Color.Black;
-            songLabel.Location = new Point(208, 128);
+            songLabel.Location = new Point(193, 89);
             songLabel.Name = "songLabel";
             songLabel.Size = new Size(73, 29);
             songLabel.TabIndex = 0;
@@ -78,22 +68,22 @@
             // 
             // artistTextBox
             // 
-            artistTextBox.BackColor = SystemColors.ActiveBorder;
+            artistTextBox.BackColor = Color.FromArgb(163, 189, 255);
             artistTextBox.Font = new Font("Corbel", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             artistTextBox.ForeColor = SystemColors.WindowText;
-            artistTextBox.Location = new Point(303, 65);
+            artistTextBox.Location = new Point(282, 29);
             artistTextBox.Name = "artistTextBox";
-            artistTextBox.Size = new Size(268, 26);
+            artistTextBox.Size = new Size(280, 26);
             artistTextBox.TabIndex = 1;
             // 
             // songTextBox
             // 
-            songTextBox.BackColor = SystemColors.ActiveBorder;
+            songTextBox.BackColor = Color.FromArgb(163, 189, 255);
             songTextBox.Font = new Font("Corbel", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             songTextBox.ForeColor = SystemColors.WindowText;
-            songTextBox.Location = new Point(303, 134);
+            songTextBox.Location = new Point(282, 95);
             songTextBox.Name = "songTextBox";
-            songTextBox.Size = new Size(268, 26);
+            songTextBox.Size = new Size(280, 26);
             songTextBox.TabIndex = 2;
             // 
             // searchButton
@@ -102,7 +92,7 @@
             searchButton.FlatAppearance.BorderSize = 0;
             searchButton.FlatStyle = FlatStyle.Flat;
             searchButton.Image = (Image)resources.GetObject("searchButton.Image");
-            searchButton.Location = new Point(590, 88);
+            searchButton.Location = new Point(568, 48);
             searchButton.Name = "searchButton";
             searchButton.Size = new Size(44, 49);
             searchButton.TabIndex = 3;
@@ -115,24 +105,40 @@
             // 
             gitHubLabel.AutoSize = true;
             gitHubLabel.Font = new Font("Corbel", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            gitHubLabel.ForeColor = Color.FromArgb(193, 89, 59);
-            gitHubLabel.Location = new Point(327, 418);
+            gitHubLabel.ForeColor = Color.FromArgb(163, 189, 255);
+            gitHubLabel.Location = new Point(325, 418);
             gitHubLabel.Name = "gitHubLabel";
             gitHubLabel.Size = new Size(73, 23);
             gitHubLabel.TabIndex = 4;
             gitHubLabel.Text = "Git Hub";
-            gitHubLabel.Click += label1_Click;
+            gitHubLabel.Click += gitHubLabel_Click;
+            gitHubLabel.MouseEnter += gitHubLabel_MouseEnter;
+            gitHubLabel.MouseLeave += gitHubLabel_MouseLeave;
             // 
             // apiLabel
             // 
             apiLabel.AutoSize = true;
             apiLabel.Font = new Font("Corbel", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            apiLabel.ForeColor = Color.FromArgb(193, 89, 59);
-            apiLabel.Location = new Point(441, 418);
+            apiLabel.ForeColor = Color.FromArgb(163, 189, 255);
+            apiLabel.Location = new Point(475, 418);
             apiLabel.Name = "apiLabel";
             apiLabel.Size = new Size(37, 23);
             apiLabel.TabIndex = 5;
             apiLabel.Text = "Api";
+            apiLabel.Click += apiLabel_Click;
+            apiLabel.MouseEnter += apiLabel_MouseEnter;
+            apiLabel.MouseLeave += apiLabel_MouseLeave;
+            // 
+            // reiDancingpictureBox
+            // 
+            reiDancingpictureBox.BackColor = Color.Transparent;
+            reiDancingpictureBox.Image = (Image)resources.GetObject("reiDancingpictureBox.Image");
+            reiDancingpictureBox.Location = new Point(319, 151);
+            reiDancingpictureBox.Name = "reiDancingpictureBox";
+            reiDancingpictureBox.Size = new Size(243, 264);
+            reiDancingpictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            reiDancingpictureBox.TabIndex = 7;
+            reiDancingpictureBox.TabStop = false;
             // 
             // StartForm
             // 
@@ -140,6 +146,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(51, 51, 51);
             ClientSize = new Size(800, 450);
+            Controls.Add(reiDancingpictureBox);
             Controls.Add(apiLabel);
             Controls.Add(gitHubLabel);
             Controls.Add(searchButton);
@@ -147,18 +154,15 @@
             Controls.Add(artistTextBox);
             Controls.Add(songLabel);
             Controls.Add(artistLabel);
-            Controls.Add(backgroundPicture1);
             FormBorderStyle = FormBorderStyle.None;
             Name = "StartForm";
             Text = "StarForm";
-            ((System.ComponentModel.ISupportInitialize)backgroundPicture1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)reiDancingpictureBox).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private PictureBox backgroundPicture1;
         private Label artistLabel;
         private Label songLabel;
         private TextBox artistTextBox;
@@ -167,5 +171,6 @@
         private Button searchButton;
         private Label gitHubLabel;
         private Label apiLabel;
+        private PictureBox reiDancingpictureBox;
     }
 }
